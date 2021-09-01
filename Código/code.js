@@ -2,8 +2,8 @@
 
 //Variáveis
 var hora = 1;
-var minuto = 0;
-var segundo = 0;
+var minuto = 1;
+var segundo = 1;
 
 let h;
 let m;
