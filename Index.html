@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo/style.css">
     <title>Cronômetro</title>
 </head>
+
 <body>
+
+    <header>Cronômetro</header>
 
     <main>
 
 
-        <div id="horas">
+        <div class="numero" id="horas">
             00
         </div>
+
+
+
+        <div class="numero" id="minutos">
+            00
+        </div>
+
+
+        <div class="numero" id="segundos">
+            00
+        </div>
+
+
+        <div id="pausa">
+            <button class="btn" onclick="iniciar()">Iniciar</button>
+            
+            <button class="btn" onclick="reiniciar()">Reiniciar</button>
+
+        </div>
+
         
 
 
-        <div id="minutos">
-            00
-        </div>
-
-
-        <div id="segundos">
-            00
-        </div>
-
     </main>
-    <div id="pausa">
-    <button onclick="iniciar()">Iniciar</button>
-    </div>
-    
-    <button onclick="reiniciar()">Reiniciar</button>
+
+    <footer>
+        <img src="" alt="">
+        <h1></h1>
+        <p></p>
+    </footer>
 
     <script src="Código/code.js"></script>
 </body>
+
 </html>

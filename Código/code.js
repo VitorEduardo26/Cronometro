@@ -19,7 +19,7 @@ var cronometro;//Seleciona o intervalo.
 function iniciar() {
     var a;
     cronometro = setInterval(contar, tempo);
-    a = document.getElementById("pausa").innerHTML = '<button onclick="pausar()">Pausar</button>';
+    a = document.getElementById("pausa").innerHTML = '<button onclick="pausar()">Pausar</button>' + '<button class="btn" onclick="reiniciar()">Reiniciar</button>';
 };
 
 
@@ -27,7 +27,7 @@ function iniciar() {
 function pausar() {
     clearInterval(cronometro);
     var a;
-    a = document.getElementById("pausa").innerHTML = '<button onclick="iniciar()">Continuar</button>';
+    a = document.getElementById("pausa").innerHTML = '<button onclick="iniciar()">Continuar</button>' + '<button class="btn" onclick="reiniciar()">Reiniciar</button>';
 };
 
 
@@ -35,7 +35,7 @@ function pausar() {
 function reiniciar() {
     //Retorno os valores todos aos iniciais e pauso a contagem.
     pausar();
-    hora = "0" + 1;
+    hora = "0" + 0;
     minuto = "0" + 0;
     segundo = "0" + 0;
 
@@ -44,7 +44,7 @@ function reiniciar() {
     h = document.getElementById("horas").innerHTML = hora
 
     var a;
-    a = document.getElementById("pausa").innerHTML = '<button onclick="iniciar()">Iniciar</button>';
+    a = document.getElementById("pausa").innerHTML = '<button class="btn" onclick="iniciar()">Iniciar</button>' + '<button class="btn" onclick="reiniciar()">Reiniciar</button>';
 };
 
 
