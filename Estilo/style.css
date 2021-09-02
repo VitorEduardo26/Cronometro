@@ -1,17 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    color: #FFD700;
+    
 }
 body{
-    background-color: black;
+    
 }
 header{
-    background-color: #FFDB58;
+    margin: auto;
+    background-color: black;
     text-align: center;
     height: 100px;
     font-size: 50px;
     padding: 10px;
-    border: solid black;
+    border: solid #FFD700;
     border-top: none;
     border-radius: 115px;
     border-top-left-radius: 0;
@@ -19,36 +22,116 @@ header{
 }
 
 main{
-    width: 700px;
+    width: 500px;
     height: 700px;
-    background-color: #F7D917;
+    background-color: black;
     text-align: center;
     margin: auto;
-    padding: 20px;
-    border: solid black;
+    padding: 50px;
+    border: solid #FFD700;
     border-radius: 35px;
+    box-sizing: border-box;
 }
 .numero{
     padding: 20px;
     display: inline;
     font-size: 50px;
 }
+.nome{
+display: inline-block;
+margin-right: 20px;
+margin-left: 20px;
+}
+#nome1{
+    margin-left: 20px;
+}
+
 button{
     padding: 10px;
     font-size: 20px;
     margin: 10px;
+    
 }
 .btn{
-    box-sizing: border-box;
     display: inline;
     text-align: center;
+    background-color: black;
+    color: #FFD700;
+    border-radius: 10px;
+    border: solid #FFD700;
 }
 
+#pausa{
+    margin-top: 50px;
+}
+#continuar{
+}
 
 footer{
     text-align: center;
-    background-color: #FFDB58;
-    height: 63px;
-    border: solid black;
+    background-color: black;
+    height: 120px;
+    border: solid #FFD700;
     border-bottom: none;
+    border-radius: 215px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    header{
+        margin: auto;
+        background-color: black;
+        text-align: center;
+        height: 50px;
+        font-size: 40px;
+        padding: 10px;
+        border: solid #FFD700;
+        border-radius: 115px;
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 370px;
+    }
+
+
+    main{
+        width: 250px;
+        height: 700px;
+        background-color: black;
+        text-align: center;
+        margin: auto;
+        padding: 10px;
+        border: solid #FFD700;
+        border-radius: 35px;
+    }
+    .numero{
+        margin-top: 10px;
+        padding: 0px;
+        display: inline;
+        font-size: 40px;
+        margin-right: 5px;
+    }
+
+    .nome{
+        display: inline-block;
+        font-size: 15px;
+        margin-right: 10px;
+        margin-left: 8px;
+        box-sizing: border-box;
+        }
+        #nome1{
+            margin-left: 0px;
+        }
+
+        .btn{
+            padding: 20px;
+            text-align: center;
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+        }
+
 }
