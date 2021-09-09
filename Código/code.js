@@ -1,9 +1,9 @@
 "use strict"
 
 //Variáveis
-var hora = 1;
-var minuto = 1;
-var segundo = 1;
+var hora = 0;
+var minuto = 0;
+var segundo = 0;
 
 let h;
 let m;
@@ -35,38 +35,41 @@ function pausar() {
 function reiniciar() {
     //Retorno os valores todos aos iniciais e pauso a contagem.
     pausar();
-    
-    hora = "0" + 0;
-    minuto = "0" + 0;
-    segundo = "0" + 0;
 
-    s = document.getElementById("segundos").innerHTML = segundo;
-    m = document.getElementById("minutos").innerHTML = minuto;
-    h = document.getElementById("horas").innerHTML = hora
+    s = document.getElementById("segundos").innerHTML = '<h1>00</h1><br><h2 class="nome">SEGUNDO</h2>';
+    m = document.getElementById("minutos").innerHTML = '<h1>00</h1><br><h2 class="nome">MINUTO</h2>';
+    h = document.getElementById("horas").innerHTML = '<h1>00</h1><br><h2 class="nome" id="nome1">HORA</h2>';
 
     var a;
-    a = document.getElementById("pausa").innerHTML = '<button class="btn" onclick="iniciar()">Iniciar</button>' + " " + '<button class="btn" onclick="reiniciar()">Reiniciar</button>';
+    a = document.getElementById("pausa").innerHTML = '<button class="btn" onclick="iniciar()">Iniciar</button>' + '<button class="btn" onclick="reiniciar()">Reiniciar</button>';
 };
 
 
 //Contador.
 function contar() {
 
+
     //Pego cada elemento e a cada "tempo" adiciono um, faço as verificações até dez e até 60.
+    if (segundo == 0) {
 
-    s = document.getElementById("segundos").innerHTML = segundo < 10 ? "0" + segundo++ : segundo++;
+        segundo = 1;
 
-    if (segundo == 60) {
-        segundo = 0;
-        m = document.getElementById("minutos").innerHTML = minuto < 10 ? "0" + minuto++ : minuto++;
+    }else{
 
+        s = document.getElementById("segundos").innerHTML = parseInt(segundo) < 10 ? "<h1>" +"0" + segundo++ + "</h1>" + '<h2 class="nome">SEGUNDO</h2>' : "<h1>" + segundo++ + "</h1>" + '<h2 class="nome">SEGUNDO</h2>';
+
+        if (segundo == 60) {
+            segundo = 0;
+            m = document.getElementById("minutos").innerHTML = minuto < 10 ? "<h1>" + "0" + minuto++ + "</h1>" + '<br><h2 class="nome">MINUTO</h2>': "<h1>" + minuto++ + "</h1>" + '<br><h2 class="nome">MINUTO</h2>';
+
+        };
+
+        if (minuto == 60) {
+            minuto = 0;
+            h = document.getElementById("horas").innerHTML = hora < 10 ? "<h1>" + "0" + hora++ + "</h1>" + '<br><h2 class="nome" id="nome1">HORA</h2>': "<h1>" + hora++ + "</h1>" + '<br><h2 class="nome" id="nome1">HORA</h2>';
+
+        };
+        //Verificação até 10: concateno um 0 em números com apenas uma casa.
+        //Verificação até 60: a cada 60 segundos 1 minuto e assim com minutos também.
     };
-
-    if (minuto == 60) {
-        minuto = 0;
-        h = document.getElementById("horas").innerHTML = hora < 10 ? "0" + hora++ : hora++;
-
-    };
-    //Verificação até 10: concateno um 0 em números com apenas uma casa.
-    //Verificação até 60: a cada 60 segundos 1 minuto e assim com minutos também.
-};
+}

@@ -5,42 +5,44 @@
     
 }
 body{
+    background-image: url(bursting-energy-particles-made-of-golden-dust.jpg);
     
 }
 header{
     margin: auto;
-    background-color: black;
+    width: 66%;
     text-align: center;
     height: 100px;
     font-size: 50px;
     padding: 10px;
     border: solid #FFD700;
     border-top: none;
-    border-radius: 115px;
+    border-radius: 30%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
 main{
-    width: 500px;
+    width: 35%;
     height: 700px;
-    background-color: black;
     text-align: center;
     margin: auto;
     padding: 50px;
     border: solid #FFD700;
     border-radius: 35px;
     box-sizing: border-box;
+    background-color: #00000020;
 }
 .numero{
     padding: 20px;
-    display: inline;
+    float: left;
     font-size: 50px;
+    margin:auto;
 }
 .nome{
 display: inline-block;
-margin-right: 20px;
-margin-left: 20px;
+margin-left: 2%;
+font-size: 20px;
 }
 #nome1{
     margin-left: 20px;
@@ -56,13 +58,14 @@ button{
     display: inline;
     text-align: center;
     background-color: black;
-    color: #FFD700;
+    color: #FFFAFF;
     border-radius: 10px;
     border: solid #FFD700;
 }
 
 #pausa{
-    margin-top: 50px;
+    margin-top: 10%;
+    display: inline;
 }
 #continuar{
 }
@@ -73,7 +76,7 @@ footer{
     height: 120px;
     border: solid #FFD700;
     border-bottom: none;
-    border-radius: 215px;
+    border-radius: 50%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
