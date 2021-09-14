@@ -9,7 +9,7 @@ let h;
 let m;
 let s;
 
-var tempo = 1000; //Quantos milésimos vale um segundo.
+var tempo = 1; //Quantos milésimos vale um segundo.
 var cronometro;//Seleciona o intervalo.
 
 
